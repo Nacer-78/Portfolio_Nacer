@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HelloWorld from './HelloWorld'
 import Header from './Header'
+import Loading_page from './Loading_page/Loading_page'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,8 @@ function App() {
 
     <>
 
-      <Header/>
+      {/* <Header/> */}
+      <Loading_page/>
 
     </>
 

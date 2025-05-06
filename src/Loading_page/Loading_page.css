@@ -1,0 +1,55 @@
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+
+.bar_loading {
+    background: white;
+    width: 15px;
+    height: 125px;
+    animation: loading 1s infinite;
+}
+
+div.loader div.bar_loading:nth-child(1) {
+
+    animation-delay: 0.1s !important;
+
+}
+
+.bar_loading:nth-child(2) {
+    
+    animation-delay: 0.2s !important;
+
+}
+
+.bar_loading:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.bar_loading:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.bar_loading:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes loading {
+    
+    50% {
+
+        height: 100px;
+        transform: translateY(10px);
+
+    }
+    25% {
+
+        opacity: 0.5;
+
+    }
+
+}
