@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+    background-image: url("picture/AUDI_RS6_HOME_MENU.jpg");
+    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
