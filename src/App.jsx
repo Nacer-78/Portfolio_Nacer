@@ -3,6 +3,7 @@ import { Component } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Header from './Header'
 import Loading_page from './Loading_page/Loading_page'
 import Footer from './Footer';
