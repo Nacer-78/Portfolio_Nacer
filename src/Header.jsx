@@ -2,7 +2,18 @@ export default function Header () {
     
     return (
     
-        <header className="bg-[url('picture/Pattern_header.svg')] h-15 bg-contain bg-cover bg-center bg-no-repeat flex justify-center items-center">
+        <header className="
+            bg-[url('picture/Pattern_header.svg')] 
+            bg-cover 
+            bg-center 
+            bg-no-repeat  
+            border-solid 
+            border-[3px] 
+            border-white
+            flex justify-center 
+            items-center
+            h-13
+        ">
             <h1 className="text-center text-3xl font-bold"> Bienvenue sur mon portfolio ! </h1>
         </header>
     
