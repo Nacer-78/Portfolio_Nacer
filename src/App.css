@@ -1,6 +1,8 @@
 body {
+    margin: 0;
     background-image: url("picture/AUDI_RS6_HOME_MENU.jpg");
     background-size: cover;
+    background-position: center;
     /* background-size: 100%; */
     background-attachment: fixed;
 
@@ -16,3 +18,190 @@ body.blur-active {
 footer h1.color_footer {
     color: #3E3E3E;
 }
+
+div.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.icons {
+    padding: 50px;
+}
+
+a.icons.initial_position {
+  opacity: 0%;
+}
+
+a.icons.initial_position:nth-child(1) {
+    transform: translate(-150px, -150px);
+}
+
+a.icons.initial_position:nth-child(2) {
+    transform: translate(0px, -150px);
+}
+
+a.icons.initial_position:nth-child(3) {
+    transform: translate(150px, -150px);
+}
+
+a.icons.initial_position:nth-child(4) {
+    transform: translate(-150px, 0px);
+}
+
+a.icons.initial_position:nth-child(5) {
+    transform: translate(0px, 0px);
+}
+
+a.icons.initial_position:nth-child(6) {
+    transform: translate(150px, 0px);
+}
+
+a.reset_position {
+    transform: translate(0px, 0px) !important;
+    opacity: 100% !important;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@keyframes links_apparition {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+div.Image_hover{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+}
+
+div.Image_hover:hover img.home_page_icons {
+    animation: translation 1s infinite;
+}
+
+div.Image_hover img.home_page_icons_hover { 
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+div.Image_hover:hover img.home_page_icons_hover{
+    display: inline;
+    animation: translation 1s infinite;
+}
+
+@keyframes translation {
+    
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+/* START TOOLTIP */
+
+/* Positionnement du tooltip */
+[data-tooltip] {
+  --arrow-size: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Tooltip masqué */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  bottom: calc(100% + var(--arrow-size));
+  pointer-events: none;
+  transition: 0.2s;
+  will-change: transform;
+}
+
+/* Apparition du tooltip */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  padding: 10px 18px;
+  min-width: 50px;
+  max-width: 300px;
+  width: max-content;
+  border-radius: 6px;
+  font-size: 25px;
+  background-color: #fbb206ff;
+  color: black;
+  text-align: center;
+  white-space: pre-wrap;
+  transform: translate(-50%,  calc(0px - var(--arrow-size))) scale(0.25);
+}
+
+/* Flèche */
+[data-tooltip]:after {
+  content: '';
+  border-style: solid;
+  border-width: var(--arrow-size) var(--arrow-size) 0px var(--arrow-size);
+  border-color: #fbb206ff transparent transparent transparent;
+  transition-duration: 0s;
+  transform-origin: top;
+  transform: translateX(-50%) scaleY(0);
+}
+
+/* Apparition du tooltip en hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* TOP */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  bottom: calc(95% + var(--arrow-size));
+  top: auto;
+}
+
+[data-tooltip]:hover:before {
+  transition-delay: 0.3s;
+  transform: translate(-50%, calc(0px - var(--arrow-size))) scale(1);
+}
+
+[data-tooltip]:hover:after {
+  transition-delay: 0.5s;
+  transition-duration: 0.2s;
+  transform: translateX(-50%) scaleY(1);
+}
+
+/* BOTTOM */
+[data-tooltip-location="bottom"]:before,
+[data-tooltip-location="bottom"]:after {
+  top: calc(85% + var(--arrow-size));
+  bottom: auto;
+}
+
+[data-tooltip-location="bottom"]:before {
+  transform: translate(-50%, var(--arrow-size)) scale(0.5);
+}
+[data-tooltip-location="bottom"]:hover:before {
+  transform: translate(-50%, var(--arrow-size)) scale(1);
+}
+
+[data-tooltip-location="bottom"]:after {
+  border-width: 0px var(--arrow-size) var(--arrow-size) var(--arrow-size);
+  border-color: transparent transparent #fbb206ff transparent;
+  transform-origin: bottom;
+  
+}
+
+/* END TOOLTIP */
+

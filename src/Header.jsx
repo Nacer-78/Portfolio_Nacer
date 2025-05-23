@@ -3,6 +3,7 @@ export default function Header () {
     return (
     
         <header className="
+            h-[75px]
             bg-[url('picture/Pattern_header.svg')] 
             bg-cover 
             bg-center 
@@ -10,7 +11,8 @@ export default function Header () {
             border-solid 
             border-[3px] 
             border-white
-            flex justify-center 
+            flex 
+            justify-center 
             items-center
             h-13
         ">

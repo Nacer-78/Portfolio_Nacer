@@ -3,10 +3,10 @@ import { Component } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Header from './Header'
 import Loading_page from './Loading_page/Loading_page'
+import Header from './Header'
 import Footer from './Footer';
+import Home_page from './Home_page';
 
 function App() {
   
@@ -35,6 +35,7 @@ function App() {
       <>
   
         <Header/>
+        <Home_page/>
         <Footer/>
   
       </>
