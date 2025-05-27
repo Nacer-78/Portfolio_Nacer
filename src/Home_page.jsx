@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Qui_suis_je from './picture/Qui_suis_je.svg';
 import Qui_suis_je_hover from './picture/Qui_suis_je_hover.svg';
@@ -20,14 +21,6 @@ import Loisir_hover from './picture/Loisir_hover.svg';
 
 
 export default function Home_page () {
-
-    // useEffect(() => {
-
-    //     const links = document.querySelectorAll('a.icons');
-
-    //     links.forEach(link => link.classList.add("reset_position"));
-
-    // }, []);
 
     useEffect(() => {
 
@@ -51,15 +44,15 @@ export default function Home_page () {
 
     return (
 
-        <div className="container mt-[50px] mb-[50px]">
+        <div className="flex items-center justify-center mt-[50px] mb-[50px]">
             <div className="grid grid-cols-3 gap-4">
 
-                <a href="#" className="icons initial_position" data-tooltip="Qui suis je ?">
+                <Link to={"/about_us"} className="icons initial_position" data-tooltip="Qui suis je ?">
                     <div className="Image_hover">
                         <img src={Qui_suis_je} className="home_page_icons" alt="Qui_suis_je"/>
                         <img src={Qui_suis_je_hover} className="home_page_icons_hover" alt="Qui_suis_je"/>
                     </div>
-                </a>
+                </Link>
 
                 <a href="#" className="icons initial_position" data-tooltip="Mes projets">
                     <div className="Image_hover">

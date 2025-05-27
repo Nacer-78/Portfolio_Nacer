@@ -12,8 +12,8 @@ export default function Header () {
             border-[3px] 
             border-white
             flex 
-            justify-center 
             items-center
+            justify-center
             h-13
         ">
             <h1 className="text-center text-3xl font-bold"> Bienvenue sur mon portfolio ! </h1>

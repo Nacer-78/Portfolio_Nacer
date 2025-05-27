@@ -1,9 +1,7 @@
 body {
-    margin: 0;
     background-image: url("picture/AUDI_RS6_HOME_MENU.jpg");
     background-size: cover;
     background-position: center;
-    /* background-size: 100%; */
     background-attachment: fixed;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -19,11 +17,7 @@ footer h1.color_footer {
     color: #3E3E3E;
 }
 
-div.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* START ICONS IN HOME PAGE */
 
 a.icons {
     padding: 50px;
@@ -63,16 +57,6 @@ a.reset_position {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-@keyframes links_apparition {
-  from {
-    opacity: 0%;
-  }
-
-  to {
-    opacity: 100%;
-  }
-}
-
 div.Image_hover{
     width: 250px;
     height: 250px;
@@ -107,6 +91,8 @@ div.Image_hover:hover img.home_page_icons_hover{
     }
 
 }
+
+/* END ICONS IN HOME PAGE */
 
 /* START TOOLTIP */
 

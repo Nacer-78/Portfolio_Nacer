@@ -1,0 +1,93 @@
+✅ 1. Langages de programmation
+
+Tu les as déjà :
+
+HTML5
+
+CSS3
+
+JavaScript (ES6+)
+
+Tu peux aussi ajouter :
+
+TypeScript (surcouche JS très utilisée avec React)
+
+Sass / SCSS (préprocesseur CSS, utile pour projets complexes)
+
+________________________________________________________________________________________________
+
+⚙️ 2. Frameworks / Librairies
+Tu as noté :
+
+React
+
+Bootstrap
+
+Tailwind CSS
+
+Tu peux aussi ajouter selon ton niveau :
+
+Next.js (framework React pour les sites performants et SEO-friendly)
+
+jQuery (pas à la mode, mais encore utilisé dans certains projets anciens)
+
+Vue.js ou Angular (si jamais tu veux élargir tes compétences plus tard)
+
+________________________________________________________________________________________________
+
+🧱 3. Outils / Environnement de travail
+Très important pour montrer que tu sais travailler comme un pro :
+
+Git & GitHub
+
+VS Code (ou tout autre éditeur de code)
+
+npm / yarn (gestionnaires de paquets)
+
+ESLint / Prettier (outils de qualité de code)
+
+Chrome DevTools (débogage)
+
+Figma / Zeplin (lecture de maquettes, intégration UI)
+
+________________________________________________________________________________________________
+
+
+💼 4. CMS & Gestion de contenu
+Tu as mis :
+
+WordPress
+
+Tu peux aussi mentionner :
+
+Elementor / Divi (constructeurs de pages dans WordPress)
+
+Headless CMS (ex : Strapi, Sanity, Contentful) si tu t’y intéresses
+
+________________________________________________________________________________________________
+
+🚀 5. Performances & Accessibilité
+Responsive Design (mobile/tablette/desktop)
+
+SEO technique (base)
+
+Web Performance (lazy loading, minification…)
+
+Accessibilité (a11y) (WCAG, ARIA…)
+
+________________________________________________________________________________________________
+
+🧪 6. Tests (bonus mais apprécié)
+Jest (tests unitaires en JS/React)
+
+Testing Library (tests UI)
+
+Cypress (tests end-to-end)
+
+🧠 Exemple de présentation claire sur ton portfolio :
+
+🛠️ Langages : HTML5, CSS3, JavaScript (ES6+), TypeScript  
+🎨 Frameworks / Librairies : React, Bootstrap, Tailwind CSS, Sass  
+🧰 Outils : Git, GitHub, npm, VS Code, Figma, Chrome DevTools  
+📦 CMS : WordPress, Elementor  
+📱 Compétences complémentaires : Responsive Design, SEO technique, Accessibilité  
