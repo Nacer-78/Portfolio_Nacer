@@ -48,42 +48,42 @@ export default function Home_page () {
             <div className="grid grid-cols-3 gap-4">
 
                 <Link to={"/about_us"} className="icons initial_position" data-tooltip="Qui suis je ?">
-                    <div className="Image_hover">
-                        <img src={Qui_suis_je} className="home_page_icons" alt="Qui_suis_je"/>
-                        <img src={Qui_suis_je_hover} className="home_page_icons_hover" alt="Qui_suis_je"/>
+                    <div className="Image_hover w-[250px] h-[250px]">
+                        <img src={Qui_suis_je} className="home_page_icons" alt="Qui suis je"/>
+                        <img src={Qui_suis_je_hover} className="home_page_icons_hover" alt="Qui suis je"/>
                     </div>
                 </Link>
 
                 <a href="#" className="icons initial_position" data-tooltip="Mes projets">
-                    <div className="Image_hover">
-                        <img src={My_projects} className="home_page_icons" alt="My_projects"/>
-                        <img src={My_projects_hover} className="home_page_icons_hover" alt="My_projects"/>
+                    <div className="Image_hover w-[250px] h-[250px]">
+                        <img src={My_projects} className="home_page_icons" alt="Mes projets"/>
+                        <img src={My_projects_hover} className="home_page_icons_hover" alt="Mes projets"/>
                     </div>
                 </a>
 
                 <a href="#" className="icons initial_position" data-tooltip="Mes compétences">
-                    <div className="Image_hover">
-                        <img src={Skills} className="home_page_icons" alt="Skills"/>
-                        <img src={Skills_hover} className="home_page_icons_hover" alt="Skills"/>
+                    <div className="Image_hover w-[250px] h-[250px]">
+                        <img src={Skills} className="home_page_icons" alt="Mes compétences"/>
+                        <img src={Skills_hover} className="home_page_icons_hover" alt="Mes compétences"/>
                     </div>
                 </a>
 
                 <a href="#" className="icons initial_position" data-tooltip="Contactez-moi" data-tooltip-location="bottom">
-                    <div className="Image_hover">
-                        <img src={Contact_me} className="home_page_icons" alt="Contact_me"/>
-                        <img src={Contact_me_hover} className="home_page_icons_hover" alt="Contact_me"/>
+                    <div className="Image_hover w-[250px] h-[250px]">
+                        <img src={Contact_me} className="home_page_icons" alt="Contactez-moi"/>
+                        <img src={Contact_me_hover} className="home_page_icons_hover" alt="Contactez-moi"/>
                     </div>
                 </a>
 
                 <a href="#" className="icons initial_position" data-tooltip="Certification" data-tooltip-location="bottom">
-                    <div className="Image_hover">
+                    <div className="Image_hover w-[250px] h-[250px]">
                         <img src={Certification} className="home_page_icons" alt="Certification"/>
                         <img src={Certification_hover} className="home_page_icons_hover" alt="Certification"/>
                     </div>
                 </a>
 
                 <a href="#" className="icons initial_position" data-tooltip="Loisir" data-tooltip-location="bottom">
-                    <div className="Image_hover">
+                    <div className="Image_hover w-[250px] h-[250px]">
                         <img src={Loisir} className="home_page_icons" alt="Loisir"/>
                         <img src={Loisir_hover} className="home_page_icons_hover" alt="Loisir"/>
                     </div>

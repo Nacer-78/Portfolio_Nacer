@@ -58,8 +58,6 @@ a.reset_position {
 }
 
 div.Image_hover{
-    width: 250px;
-    height: 250px;
     position: relative;
     display: inline-block;
 }
@@ -190,4 +188,30 @@ div.Image_hover:hover img.home_page_icons_hover{
 }
 
 /* END TOOLTIP */
+
+/* START ABOUT US */
+
+button.checkpoints_golf_8:hover {
+    color: white;
+}
+
+button.checkpoints_golf_8:hover {
+    color: #fbb206ff;
+    animation: translation 1s infinite;
+}
+
+div.Image_hover img.pedal_icons_hover { 
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+div.Image_hover:hover img.pedal_icons_hover{
+    display: inline;
+    cursor: pointer;
+}
+
+/* END ABOUT US */
 

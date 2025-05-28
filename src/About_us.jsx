@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+
 import Me from './picture/Me.png';
 import School_career from './picture/about_us_school_career.jpg';
 import Why_front_end from './picture/about_us_why_front_end.jpg';
@@ -5,7 +8,10 @@ import Personnality from './picture/about_us_personnality.png';
 
 import Golf_8 from './picture/golf_8.svg';
 
-
+import Accelerator_pedal from './picture/accelerator_pedal.svg';
+import Accelerator_pedal_hover from './picture/accelerator_pedal_hover.svg';
+import Brake_pedal from './picture/brake_pedal.svg';
+import Brake_pedal_hover from './picture/brake_pedal_hover.svg';
 
 export default function About_us () {
     
@@ -49,7 +55,7 @@ export default function About_us () {
                 mr-auto 
                 mb-[50px]
 
-            " alt="School_career"/>
+            " alt="School career"/>
 
             <p className="mb-[50px]">
 
@@ -75,7 +81,7 @@ export default function About_us () {
                 mr-auto 
                 mb-[50px]
 
-            " alt="Why_front_end"/>
+            " alt="Why front_ nd"/>
 
             <p className="mb-[50px]">
 
@@ -114,30 +120,59 @@ export default function About_us () {
 
             </p>
 
-            <div className="car_zone mt-[100px] grid grid-cols-3 gap-4">
+            <div className="mt-[100px] grid grid-cols-3 gap-4 items-end ">
 
                 <div className="col-span-1">
-                    <img src={Golf_8} className="w-[300px] h-[125px]"/> {/* 500 200 */ }
+                    <img src={Golf_8} className="w-[300px] h-[125px]"/>
                 </div>
 
-                <div className="col-span-2">
+                <div className="col-span-2 mb-[5px]">
 
-                    <div className="grid grid-cols-4 gap-4 text-center">
-                        <div className="place-items-center">
-                        <button> 1 </button>
+                    <div className="grid grid-cols-4 gap-4 flex justify-end text-[60px]">
 
+                        <div className="flex justify-end">
+                            <button className="checkpoints_golf_8"> <FontAwesomeIcon icon={faLocationDot} /> </button>
                         </div>
-                        <button> 2 </button>
-                        <button> 3 </button>
-                        <button> 4 </button>
+                        <div className="flex justify-end">
+                            <button className="checkpoints_golf_8"> <FontAwesomeIcon icon={faLocationDot} /> </button>
+                        </div>
+                        <div className="flex justify-end">
+                            <button className="checkpoints_golf_8"> <FontAwesomeIcon icon={faLocationDot} /> </button>
+                        </div>
+                        <div className="flex justify-end">
+                            <button className="checkpoints_golf_8"> <FontAwesomeIcon icon={faLocationDot} /> </button>
+                        </div>
+
                     </div>
-                    
+
                 </div>
 
             </div>
 
             <hr className="mb-[5px] border-[2px] border-solid border-white"/>
             <hr className="border-[2px] border-solid border-white"/>
+
+            <div className="mt-[50px] grid grid-cols-2 gap-10 ">
+
+                <div className="flex justify-end">
+                    <button>
+                        <div className="Image_hover">
+                        <img src={Brake_pedal} className="w-[150px] h-[150px] pedal_icons" alt="Brake pedal"/>
+                        <img src={Brake_pedal_hover} className="w-[150px] h-[150px] pedal_icons_hover" alt="Brake pedal"/>
+                        </div>
+                    </button>
+                </div>
+                <div className="flex justify-start">
+                    <button>
+                        <div className="Image_hover">
+                            <img src={Accelerator_pedal} className="w-[150px] h-[150px] pedal_icons" alt="Accelerator pedal"/>
+                            <img src={Accelerator_pedal_hover} className="w-[150px] h-[150px] pedal_icons_hover" alt="Accelerator pedal"/>
+                        </div>
+                    </button>
+                </div>
+
+
+            </div>
 
         </div>
     
