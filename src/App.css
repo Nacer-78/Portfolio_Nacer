@@ -191,11 +191,11 @@ div.Image_hover:hover img.home_page_icons_hover{
 
 /* START ABOUT US */
 
-button.checkpoints_golf_8:hover {
+p.checkpoints_golf_8 {
     color: white;
 }
 
-button.checkpoints_golf_8:hover {
+p.checkpoints_golf_animate {
     color: #fbb206ff;
     animation: translation 1s infinite;
 }

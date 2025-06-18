@@ -21,7 +21,7 @@ function App() {
 
       document.body.classList.add("blur-active");
 
-    }, 5000);
+    }, 2500);
 
   }, []);
 
