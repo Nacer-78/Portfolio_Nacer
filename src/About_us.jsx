@@ -1,3 +1,5 @@
+import { useRef, useState, useEffect } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,8 +14,6 @@ import Accelerator_pedal from './picture/accelerator_pedal.svg';
 import Accelerator_pedal_hover from './picture/accelerator_pedal_hover.svg';
 import Brake_pedal from './picture/brake_pedal.svg';
 import Brake_pedal_hover from './picture/brake_pedal_hover.svg';
-
-import { useRef, useState, useEffect } from 'react';
 
 export default function About_us () {
 
