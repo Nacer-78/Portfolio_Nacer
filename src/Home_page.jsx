@@ -61,12 +61,12 @@ export default function Home_page () {
                     </div>
                 </Link>
 
-                <a href="#" className="icons initial_position" data-tooltip="Mes compétences">
+                <Link to={"/skills"} className="icons initial_position" data-tooltip="Mes compétences">
                     <div className="Image_hover w-[250px] h-[250px]">
                         <img src={Skills} className="home_page_icons" alt="Mes compétences"/>
                         <img src={Skills_hover} className="home_page_icons_hover" alt="Mes compétences"/>
                     </div>
-                </a>
+                </Link>
 
                 <a href="#" className="icons initial_position" data-tooltip="Contactez-moi" data-tooltip-location="bottom">
                     <div className="Image_hover w-[250px] h-[250px]">

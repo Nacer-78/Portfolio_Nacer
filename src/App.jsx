@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Home_page from './Home_page';
 import About_us from './About_us';
 import My_projects from './My_projects';
+import Skills from './Skills';
 
 function App() {
   
@@ -42,6 +43,7 @@ function App() {
                 <Route path={"/"} element={<Home_page />} />
                 <Route path={"/about_us"} element={<About_us />} />
                 <Route path={"/my_projects"} element={<My_projects />} />
+                <Route path={"/skills"} element={<Skills />} />
             </Routes>
           </BrowserRouter>
         <Footer/>

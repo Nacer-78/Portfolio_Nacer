@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Card1 from './picture/Card1_First-Portfolio.png';
 import Card2 from './picture/Card2_Projet_tutore.png';
@@ -25,7 +25,7 @@ export default function My_projects () {
                             <label>
                                 
                                 <div className="carousel_title">
-                                    <a href="#">Premier portfolio</a>
+                                    <Link to="#">Premier portfolio</Link>
                                 </div>
 
                             </label>
@@ -33,7 +33,7 @@ export default function My_projects () {
                             <label>
 
                                 <div className="carousel_title">
-                                    <a href="#">Site UMI</a>
+                                    <Link to="#">Site UMI</Link>
                                 </div>
 
                             </label>
@@ -41,7 +41,7 @@ export default function My_projects () {
                             <label>
 
                                 <div className="carousel_title">
-                                    <a href="#">Le monitoring</a>
+                                    <Link to="#">Le monitoring</Link>
                                 </div>
 
                             </label>

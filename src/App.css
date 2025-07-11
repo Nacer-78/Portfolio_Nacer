@@ -272,6 +272,11 @@ div.carousel_title {
 
 div.carousel_title a {
   margin-bottom: calc(5% + 10px);
+  text-decoration: underline;
+}
+
+div.carousel_title a:hover {
+  color: #fbb206ff;
 }
 
 div.cards {
@@ -340,3 +345,40 @@ p.carousel_description {
 }
 
 /* END MY PROJECTS */
+
+/* START SKILLS */
+
+.bar {
+  position: relative;
+	background-color: transparent;
+  border: 3px solid white;
+  border-radius: 10px;
+	height: 25px;
+	margin: 0 0 20px 0;
+}
+
+.bar_fill {
+  position: absolute;
+  height: 21px;
+  width: 100%;
+  background-color: white;
+  border-radius: 7px;
+  width: 0%;
+	animation: fill 2s ease-out forwards;
+}
+
+@keyframes fill {
+
+  from {
+    width: 0;
+  }
+
+}
+
+button.button_skills:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+
+/* END SKILLS */
