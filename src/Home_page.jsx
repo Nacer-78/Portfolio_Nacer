@@ -68,19 +68,19 @@ export default function Home_page () {
                     </div>
                 </Link>
 
-                <a href="#" className="icons initial_position" data-tooltip="Contactez-moi" data-tooltip-location="bottom">
+                <Link to={"/contact_me"} className="icons initial_position" data-tooltip="Contactez-moi" data-tooltip-location="bottom">
                     <div className="Image_hover w-[250px] h-[250px]">
                         <img src={Contact_me} className="home_page_icons" alt="Contactez-moi"/>
                         <img src={Contact_me_hover} className="home_page_icons_hover" alt="Contactez-moi"/>
                     </div>
-                </a>
+                </Link>
 
-                <a href="#" className="icons initial_position" data-tooltip="Certification" data-tooltip-location="bottom">
+                <Link to={"/certification"} className="icons initial_position" data-tooltip="Certification" data-tooltip-location="bottom">
                     <div className="Image_hover w-[250px] h-[250px]">
                         <img src={Certification} className="home_page_icons" alt="Certification"/>
                         <img src={Certification_hover} className="home_page_icons_hover" alt="Certification"/>
                     </div>
-                </a>
+                </Link>
 
                 <a href="#" className="icons initial_position" data-tooltip="Loisir" data-tooltip-location="bottom">
                     <div className="Image_hover w-[250px] h-[250px]">

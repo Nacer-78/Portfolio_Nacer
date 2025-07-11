@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faSquareJs, faReact, faGitAlt, faFigma  } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faSquareJs, faReact, faGitAlt, faFigma, faWordpress  } from '@fortawesome/free-brands-svg-icons';
 import { faTabletScreenButton, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Skills () {
@@ -15,8 +15,9 @@ export default function Skills () {
         { title: 'Git', icon: faGitAlt, level: '50%' },
         { title: 'Figma', icon: faFigma, level: '70%' },
         { title: 'Responsive', icon: faTabletScreenButton, level: '40%' },
-        { title: 'Débogage', icon: faCircleXmark, level: '40%' }
-    
+        { title: 'Débogage', icon: faCircleXmark, level: '40%' },
+        { title: 'CMS', icon: faWordpress, level: '60%' }
+
     ];
 
     const bar_skills = useRef([]);
@@ -40,8 +41,6 @@ export default function Skills () {
     return (
         
         <div>
-
-            <h1 className="text-center font-bold text-3xl mt-[50px]"> Langage de Programmation </h1>
 
             <div className="m-[50px]">
 
