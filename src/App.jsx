@@ -13,6 +13,7 @@ import My_projects from './My_projects';
 import Skills from './Skills';
 import Contact_me from './Contact_me';
 import Certification from './Certification';
+import Hobbies from './Hobbies';
 
 function App() {
   
@@ -48,6 +49,7 @@ function App() {
                 <Route path={"/skills"} element={<Skills />} />
                 <Route path={"/contact_me"} element={<Contact_me />} />
                 <Route path={"/certification"} element={<Certification />} />
+                <Route path={"/hobbies"} element={<Hobbies />} />
             </Routes>
           </BrowserRouter>
         <Footer/>

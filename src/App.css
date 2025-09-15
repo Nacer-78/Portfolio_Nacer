@@ -693,9 +693,6 @@ div.scene__title {
 div.scene__title span {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 0 0.03em #8888;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: transparent;
   box-sizing: unset;
 }
 
@@ -819,6 +816,7 @@ div.container_certification {
 }
 
 .carousel_item__info {
+  /* position: relative; */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -829,7 +827,7 @@ div.container_certification {
   padding: 0 40px;
   width: 40%;
   border-right: 3px solid white;
-
+  background: rgba(0,0,0,0.35);
 }
 
 .carousel_item__image {
@@ -982,4 +980,19 @@ div.container_certification {
 
 /* END CERTIFICATION */
 
+/* START HOBBIES */
 
+/* START HOBBIES */
+
+img.picture_hobbies {
+  border-radius: 15px;
+  opacity: 50%;
+}
+
+img.picture_hobbies:hover {
+  opacity: 100%;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+
+/* END HOBBIES */

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Contact_me () {
 
     return (
@@ -52,15 +54,19 @@ export default function Contact_me () {
                                 <div className="favorite__applications">
 
                                     <div className="application_phone">
-                                        <div className="linkedin__app">
-                                            <div className="linkedin__app__logo"></div>
-                                        </div>
+                                        <Link to="https://www.linkedin.com/in/nacerallah-bouamama-12075b251/">
+                                            <div className="linkedin__app">
+                                                <div className="linkedin__app__logo"></div>
+                                            </div>
+                                        </Link>
                                     </div>
 
                                     <div className="application_phone">
-                                        <div className="github__app">
-                                            <div className="github__app__logo"></div>
-                                        </div>
+                                        <Link to="https://github.com/Nacer-78">
+                                            <div className="github__app">
+                                                <div className="github__app__logo"></div>
+                                            </div>
+                                        </Link>
                                     </div>
 
                                     <div className="application_phone">
@@ -70,9 +76,11 @@ export default function Contact_me () {
                                     </div>
 
                                     <div className="application_phone">
-                                        <div className="codepen__app">
-                                            <div className="codepen__app__logo"></div>
-                                        </div>
+                                        <Link to="https://codepen.io/Nacer-78">
+                                            <div className="codepen__app">
+                                                <div className="codepen__app__logo"></div>
+                                            </div>
+                                        </Link>
                                     </div>
 
                                 </div>
