@@ -52,7 +52,7 @@ export default function Hobbies () {
 
             <h1 className="mt-[75px] text-[30px] text-center underline"> Formule 1 </h1>
 
-            <div className="mt-[50px] grid grid-cols-2 gap-10">
+            <div className="mt-[50px] grid grid-cols-2 gap-40">
 
                 <div className="flex justify-end">
                     <Link to="https://www.formula1.com/">
@@ -67,7 +67,7 @@ export default function Hobbies () {
 
             </div>
 
-            <div className="m-[50px] text-[15px]">
+            <div className="m-[50px] pb-[50px] text-[15px]">
 
                 <h2 className="mb-[5px] underline"> Formule 1 : </h2>
 

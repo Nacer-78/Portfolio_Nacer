@@ -1,9 +1,6 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import { Component } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react';
 import Loading_page from './Loading_page/Loading_page'
 import Header from './Header'
 import Footer from './Footer';
@@ -20,6 +17,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+
     setTimeout(() => {
 
       setIsLoading(false);
@@ -40,8 +38,9 @@ function App() {
     return (
 
       <>
-        <Header/>
-          <BrowserRouter>
+
+        <BrowserRouter>
+          <Header/>
             <Routes>
                 <Route path={"/"} element={<Home_page />} />
                 <Route path={"/about_us"} element={<About_us />} />
@@ -51,9 +50,9 @@ function App() {
                 <Route path={"/certification"} element={<Certification />} />
                 <Route path={"/hobbies"} element={<Hobbies />} />
             </Routes>
-          </BrowserRouter>
-        <Footer/>
-  
+          <Footer/>
+        </BrowserRouter>
+
       </>
   
     )
