@@ -12,8 +12,8 @@ export default function Header () {
         { path: "/about_us", title: "Qui suis-je ?" },
         { path: "/my_projects", title: "Mes projets" },
         { path: "/skills", title: "Compétences" },
-        { path: "/certification", title: "Certifications" },
         { path: "/contact_me", title: "Contact" },
+        { path: "/certification", title: "Certifications" },
         { path: "/hobbies", title: "Loisirs" }
 
     ];
