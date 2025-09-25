@@ -23,8 +23,10 @@ export default function Header () {
     const nextPage = pages[currentPage + 1]
     const currentTitlePage = pages[currentPage]?.title || "Bienvenue sur mon portfolio !"
 
+    const isHome = location.pathname === "/" || location.pathname === "/Portfolio_Nacer/"
+
     // Si on est sur la Home, pas de flèches
-    if (location.pathname === "/") {
+    if (isHome) {
 
         return (
 
