@@ -39,7 +39,7 @@ function App() {
 
       <>
 
-        <BrowserRouter>
+        <BrowserRouter basename="/Portfolio_Nacer">
           <Header/>
             <Routes>
                 <Route path={"/"} element={<Home_page />} />
