@@ -1,4 +1,25 @@
+import { useState, useEffect } from "react";
+
 export default function Contact_me () {
+
+    const [time, setTime] = useState(
+
+        new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+    )
+
+    useEffect(() => {
+        
+        const interval = setInterval(() => {
+
+            setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
+
+        }, 1000)
+
+        return () => clearInterval(interval) // nettoyage du timer
+
+    }, [])
+
 
     return (
         
@@ -23,7 +44,7 @@ export default function Contact_me () {
                         <div className="screen">
 
                             <div className="time">
-                                <span>11:11</span>
+                                <span>{time}</span>
                             </div>
 
                             <div className="battery">
@@ -88,7 +109,7 @@ export default function Contact_me () {
                             </div>
 
                             <div className="screen__time">
-                                <span>11:11</span>
+                                <span>{time}</span>
                             </div>
 
                         </div>

@@ -478,9 +478,9 @@ div.screen__time {
 }
 
 div.screen__time span {
-  text-shadow: 0 0 calc(var(--phoneWidth) / 10) #fff8;
   color: #fff;
   box-sizing: unset;
+  padding-right: 25px;
 }
 
 @keyframes startPhoneScreen {
@@ -663,12 +663,12 @@ div.time span {
   position: absolute;
   cursor: pointer;
   transition: .5s transform ease-out;
-  text-shadow: -.1em -.1em .2em #fff5;
   opacity: 0;
   animation: startPhoneApplications 3s linear forwards;
   animation-delay: 1.5s;
   z-index: 4;
   box-sizing: unset;
+  top: 0.5px;
 }
 
 div.time span:hover {

@@ -25,7 +25,7 @@ export default function My_projects () {
                             <label>
                                 
                                 <div className="carousel_title">
-                                    <Link to="#">Premier portfolio</Link>
+                                    <a href="https://nacer-78.github.io/nacer.github.io/Nacer_portfolio_HomePage.html" target="_blank" rel="noopener noreferrer">Premier portfolio</a>
                                 </div>
 
                             </label>
@@ -90,9 +90,7 @@ export default function My_projects () {
                             monitoring vieillissant. Ce site avait pour mission de détecter et alerter le pôle informatique en cas de dysfonctionnements 
                             sur divers services. J'ai été chargé de moderniser l'interface, améliorer l'ergonomie et renforcer la lisibilité des alertes. 
                             Ce projet m'a permis de travailler sur un outil en production, utilisé quotidiennement par l'équipe informatique, avec de 
-                            vraies responsabilités. Ayant quitté l'entreprise à la fin de mon contrat, je n'ai malheureusement plus accès au site final. 
-                            À la place, je présente le rapport de ma soutenance qui détaille le projet, les enjeux, ainsi que les solutions techniques 
-                            mises en place.
+                            vraies responsabilités. Ayant quitté l'entreprise à la fin de mon contrat, je n'ai malheureusement plus accès au site final.
                         </p>
 
                     </label>
