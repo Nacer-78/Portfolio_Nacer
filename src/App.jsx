@@ -42,13 +42,13 @@ function App() {
         <BrowserRouter basename="/Portfolio_Nacer">
           <Header/>
             <Routes>
-                <Route path={"/"} element={<Home_page />} />
-                <Route path={"/about_us"} element={<About_us />} />
-                <Route path={"/my_projects"} element={<My_projects />} />
-                <Route path={"/skills"} element={<Skills />} />
-                <Route path={"/contact_me"} element={<Contact_me />} />
-                <Route path={"/certification"} element={<Certification />} />
-                <Route path={"/hobbies"} element={<Hobbies />} />
+              <Route path={"/"} element={<Home_page />} />
+              <Route path={"/about_us"} element={<About_us />} />
+              <Route path={"/my_projects"} element={<My_projects />} />
+              <Route path={"/skills"} element={<Skills />} />
+              <Route path={"/contact_me"} element={<Contact_me />} />
+              <Route path={"/certification"} element={<Certification />} />
+              <Route path={"/hobbies"} element={<Hobbies />} />
             </Routes>
           <Footer/>
         </BrowserRouter>

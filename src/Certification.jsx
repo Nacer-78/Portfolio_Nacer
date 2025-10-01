@@ -54,7 +54,7 @@ export default function Certification () {
                 <div className="carousel_item_certification carousel_item_1" ref={(el) => (itemsRef.current[0] = el)}>
 
                     <div className="carousel_item__image">
-                        <a href="/files/Diplome_BTS_flouter.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="/Portfolio_Nacer/files/Diplome_BTS_flouter.pdf" target="_blank" rel="noopener noreferrer">
                             <img src={file_certificate} alt="diplome" className="carousel_item__diploma" />
                         </a>
                     </div>
@@ -76,7 +76,7 @@ export default function Certification () {
                 <div className="carousel_item_certification carousel_item_2" ref={(el) => (itemsRef.current[1] = el)}>
 
                     <div className="carousel_item__image">
-                        <a href="/files/Diplome_Licence_pro_flouter.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="/Portfolio_Nacer/files/Diplome_Licence_pro_flouter.pdf" target="_blank" rel="noopener noreferrer">
                             <img src={file_certificate} alt="diplome" className="carousel_item__diploma" />
                         </a>
                     </div>

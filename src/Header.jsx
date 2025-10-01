@@ -43,7 +43,7 @@ export default function Header () {
                 items-center
                 justify-center
             ">
-                <h1 className="text-center text-3xl font-bold">{currentTitlePage}</h1>
+                <h1 className="text-center text-xl sm:text-3xl font-bold"> {currentTitlePage} </h1>
             </header>
 
         )
@@ -72,19 +72,19 @@ export default function Header () {
             { prevPage && (
 
                 <Link to={prevPage.path}>
-                    <FontAwesomeIcon icon={faArrowLeft} className="text-3xl cursor-pointer" />
+                    <FontAwesomeIcon icon={faArrowLeft} className="text-xl sm:text-3xl cursor-pointer" />
                 </Link>
 
             )}
 
             {/* Titre dynamique */}
-            <h1 className="text-center text-3xl font-bold">{currentTitlePage}</h1>
+            <h1 className="text-center text-xl sm:text-3xl font-bold">{currentTitlePage}</h1>
 
             {/* Flèche droite */}
             {nextPage && (
 
                 <Link to={nextPage.path}>
-                    <FontAwesomeIcon icon={faArrowRight} className="text-3xl cursor-pointer" />
+                    <FontAwesomeIcon icon={faArrowRight} className="text-xl sm:text-3xl cursor-pointer" />
                 </Link>
 
             )}
