@@ -17,14 +17,16 @@ import Brake_pedal_hover from './picture/brake_pedal_hover.svg';
 
 export default function About_us () {
 
-    const all_div_hidden = useRef([])
-    const golf_8 = useRef(null)
-    const checkpoints = useRef([])
-    const trackRef = useRef(null)
-    const currentIndexRef = useRef(0)
+    const all_div_hidden = useRef([]);
+    const golf_8 = useRef(null);
+    const checkpoints = useRef([]);
 
-    const [numberClicks, setNumberClicks] = useState(0)
-    const [carMovements, setCarMovements] = useState([]);
+
+    const [numberClicks, setNumberClicks] = useState(0);
+
+    useEffect(() => {
+        showDiv(numberClicks);
+    }, [numberClicks]);
 
     const contents_div_hidden = [
 
@@ -65,151 +67,76 @@ export default function About_us () {
         
     ]
 
-    function setCheckpointRef(el, i) {
-        checkpoints.current[i] = el
-    }
-
-    useEffect(() => {
-
-        function updateMovements() {
-
-            const track = trackRef.current
-            const car = golf_8.current
-
-            if (!track || !car || checkpoints.current.length === 0) return
-
-            const trackRect = track.getBoundingClientRect()
-            const carRect = car.getBoundingClientRect()
-
-            const movements = checkpoints.current.map((checkpoint) => {
-
-                if (!checkpoint) return 0
-
-                const checkpointRect = checkpoint.getBoundingClientRect()
-                const checkpointCenter = checkpointRect.left + checkpointRect.width / 2
-                const targetRelative = checkpointCenter - trackRect.left
-                let translate = targetRelative - (carRect.width / 2)
-                const maxTranslate = Math.max(0, trackRect.width - carRect.width)
-
-                if (translate < 0) translate = 0
-                if (translate > maxTranslate) translate = maxTranslate
-                return Math.round(translate)
-
-            })
-
-            const positions = [0, ...movements]
-            setCarMovements(positions)
-
-        }
-
-        function waitAndUpdate() {
-
-            setTimeout(() => {
-                requestAnimationFrame(updateMovements)
-            }, 50);
-
-        }
-
-        window.addEventListener('resize', waitAndUpdate)
-        waitAndUpdate()
-
-        return () => {
-            window.removeEventListener('resize', waitAndUpdate)
-        }
-
-    }, [])
-
-
-    useEffect(() => {
-
-        showDiv(numberClicks)
-        currentIndexRef.current = numberClicks
-
-    }, [numberClicks]);
-
-    useEffect(() => {
-
-        if (carMovements && carMovements.length > 0) {
-            showDiv(currentIndexRef.current || 0)
-        }
-
-    }, [carMovements])
+    const carMovements = [0, 575, 900, 1125]; // distance en px pour chaque étape
 
     function showDiv(indexToShow) {
 
         all_div_hidden.current.forEach((div_hidden, i) => {
-            if (div_hidden) div_hidden.classList.toggle('hidden', i !== indexToShow)
-        })
 
-        let distance
+            if (div_hidden) {
+                div_hidden.classList.toggle('hidden', i !== indexToShow);
+            }
 
-        if (carMovements && carMovements.length > 0) {
-            distance = carMovements[indexToShow] ?? carMovements[carMovements.length - 1]
-        } else {
-            distance = 0
-        }
+        });
 
+        // Déplacer la voiture (valeurs à adapter selon ton design)
+        const distance = carMovements[indexToShow] || 0;
+        golf_8.current.style.transform = `translateX(${distance}px)`;
+        golf_8.current.style.transition = "transform 1s";
 
-        if (golf_8.current) {
-
-            golf_8.current.style.transition = "transform 800ms ease"
-            golf_8.current.style.transform = `translateX(${distance}px)`
-
-        }
-
+        // Masquer tous les checkpoints sauf ceux à venir
         checkpoints.current.forEach((checkpoint, i) => {
 
-            if (checkpoint) checkpoint.style.visibility = i < indexToShow ? 'hidden' : 'visible'
+            if (checkpoint) {
+                checkpoint.style.visibility = i < indexToShow ? 'hidden' : 'visible';
+            }
 
-        })
+        });
 
-        checkpoints.current.forEach(cp => cp?.classList.remove("checkpoints_golf_animate"))
+        // Supprimer la classe animée de tous les checkpoints
+        checkpoints.current.forEach(checkpoint => {
+            checkpoint?.classList.remove("checkpoints_golf_animate");
+        });
 
+        // Ajouter la classe animée uniquement au prochain
         if (checkpoints.current[indexToShow]) {
-            checkpoints.current[indexToShow].classList.add("checkpoints_golf_animate")
+            checkpoints.current[indexToShow].classList.add("checkpoints_golf_animate");
         }
 
-        currentIndexRef.current = indexToShow
 
     }
 
 
     function checkPoints(e) {
 
-        e?.preventDefault()
+        e.preventDefault();
 
-        const current = currentIndexRef.current || 0
-        const maxIndex = all_div_hidden.current.length - 1
+        if (numberClicks < all_div_hidden.current.length - 1) {
 
-        if (current < maxIndex) {
+            const newIndex = numberClicks + 1;
 
-            const next = current + 1
-            currentIndexRef.current = next
+            setNumberClicks(newIndex);
 
-            setNumberClicks(next)
-            showDiv(next)
+            showDiv(newIndex);
 
         }
-
     }
 
     function checkPoints_reverse(e) {
 
-        e?.preventDefault()
+        e.preventDefault();
 
-        const current = currentIndexRef.current || 0
+        if (numberClicks > 0) {
 
-        if (current > 0) {
+            const newIndex = numberClicks - 1;
 
-            const prev = current - 1
-            currentIndexRef.current = prev
+            setNumberClicks(newIndex);
 
-            setNumberClicks(prev)
-            showDiv(prev)
+            showDiv(newIndex);
 
         }
-
     }
+
 
     return (
     
@@ -233,7 +160,7 @@ export default function About_us () {
 
                     " alt={content.alt}/>
 
-                    <p className="mb-[50px] whitespace-pre-line paragraph_text">
+                    <p className="mb-[50px] whitespace-pre-line">
 
                         {content.text}
 
@@ -243,60 +170,50 @@ export default function About_us () {
 
             ))}
 
-            <div className="mt-[150px]">
+            <div className="mt-[100px] grid grid-cols-3 gap-4 items-end ">
 
-                <div ref={trackRef} className="relative w-full">
+                <div className="col-span-1">
+                    <img src={Golf_8} ref={golf_8} className="w-[300px] h-[125px] golf_8"/>
+                </div>
 
-                    <div className="grid grid-cols-3 gap-4 items-end ">
+                <div className="col-span-2 mb-[5px]">
 
-                        <div className="col-span-1 relative">
-                            <img src={Golf_8} ref={golf_8} className="golf_8" alt="Golf"/>
-                        </div>
+                    <div className="grid grid-cols-3 gap-4 flex justify-end text-[60px]">
 
-                        <div className="col-span-2 mb-[5px]">
+                        {[0, 1, 2].map((_, i) => (
 
-                            <div className="flex justify-between items-end text-[60px] checkpoints_row">
-
-                                {[0, 1, 2].map((_, i) => (
-
-                                    <div className="flex justify-end" key={i} style={{ width: "33%" }}>
-                                        <p ref={el => setCheckpointRef(el, i)} className="checkpoints_golf_animate" onClick={() => { setNumberClicks(i); currentIndexRef.current = i; }}>
-                                            <FontAwesomeIcon icon={faLocationDot} />
-                                        </p>
-                                    </div>
-
-                                ))}
-
+                            <div className="flex justify-end" key={i}>
+                                <p ref={el => checkpoints.current[i] = el} className="checkpoints_golf_animate">
+                                    <FontAwesomeIcon icon={faLocationDot} />
+                                </p>
                             </div>
 
-                        </div>
+                        ))}
 
-                    </div>
-
-                    <div className="road">
-                        <hr className="mb-[5px] border-[2px] border-solid border-white"/>
-                        <hr className="border-[2px] border-solid border-white"/>
                     </div>
 
                 </div>
-                
+
             </div>
+
+            <hr className="mb-[5px] border-[2px] border-solid border-white"/>
+            <hr className="border-[2px] border-solid border-white"/>
 
             <div className="mt-[50px] grid grid-cols-2 gap-10 ">
 
                 <div className="flex justify-end">
                     <button className="brake_pedal_button" onClick={checkPoints_reverse}>
                         <div className="Image_hover">
-                        <img src={Brake_pedal} className="w-[150px] h-auto pedal_icons" alt="Brake pedal"/>
-                        <img src={Brake_pedal_hover} className="w-[150px] h-auto pedal_icons_hover" alt="Brake pedal"/>
+                        <img src={Brake_pedal} className="w-[150px] h-[150px] pedal_icons" alt="Brake pedal"/>
+                        <img src={Brake_pedal_hover} className="w-[150px] h-[150px] pedal_icons_hover" alt="Brake pedal"/>
                         </div>
                     </button>
                 </div>
                 <div className="flex justify-start">
                     <button className="accelerator_pedal_button" onClick={checkPoints}>
                         <div className="Image_hover">
-                            <img src={Accelerator_pedal} className="w-[150px] h-auto pedal_icons" alt="Accelerator pedal"/>
-                            <img src={Accelerator_pedal_hover} className="w-[150px] h-auto pedal_icons_hover" alt="Accelerator pedal"/>
+                            <img src={Accelerator_pedal} className="w-[150px] h-[150px] pedal_icons" alt="Accelerator pedal"/>
+                            <img src={Accelerator_pedal_hover} className="w-[150px] h-[150px] pedal_icons_hover" alt="Accelerator pedal"/>
                         </div>
                     </button>
                 </div>
@@ -308,4 +225,33 @@ export default function About_us () {
     
     )
   
+  }
+
+
+CSS : 
+
+/* START ABOUT US */
+
+p.checkpoints_golf_8 {
+    color: white;
 }
+
+p.checkpoints_golf_animate {
+    color: #fbb206ff;
+    animation: translation 1s infinite;
+}
+
+div.Image_hover img.pedal_icons_hover { 
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+div.Image_hover:hover img.pedal_icons_hover{
+    display: inline;
+    cursor: pointer;
+}
+
+/* END ABOUT US */

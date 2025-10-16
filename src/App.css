@@ -23,10 +23,43 @@ body.blur-active {
     transition: 0.5s ease-in-out;
   }
 
+  header {
+    background-image: url("picture/Pattern_header_screen_tablet.svg");
+  }
+
 }
 
 footer h1.color_footer {
     color: #3E3E3E;
+}
+
+@media (max-width: 550px) {
+
+  h1.header_title {
+    font-size: 27px;
+  }
+
+  svg.header_link {
+    font-size: 27px;
+  }
+
+}
+
+@media (max-width: 426px) {
+
+  header {
+    height: 50px;
+    background-image: url("picture/Pattern_header_screen_mobile.svg");
+  }
+
+  h1.header_title {
+    font-size: 15px;
+  }
+
+  svg.header_link {
+    font-size: 15px;
+  }
+
 }
 
 /* START ICONS IN HOME PAGE */
@@ -235,26 +268,63 @@ div.Image_hover:hover img.home_page_icons_hover{
 
 /* START ABOUT US */
 
+.golf_8 {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+}
+
 p.checkpoints_golf_8 {
-    color: white;
+  color: white;
 }
 
 p.checkpoints_golf_animate {
-    color: #fbb206ff;
-    animation: translation 1s infinite;
+  color: #fbb206ff;
+  animation: translation 1s infinite;
 }
 
 div.Image_hover img.pedal_icons_hover { 
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
 div.Image_hover:hover img.pedal_icons_hover{
-    display: inline;
-    cursor: pointer;
+  display: inline;
+  cursor: pointer;
+}
+
+@media (max-width: 770px) {
+
+  .checkpoints_row {
+    font-size: 45px;
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  .checkpoints_row {
+    font-size: 30px;
+  }
+
+  .road hr {
+    border: 1px solid white;
+  }
+
+  .pedal_icons, .pedal_icons_hover {
+    width: 90px;
+    height: auto;
+  }
+
+  p.paragraph_text {
+    font-size: 13px;
+  }
+  
 }
 
 /* END ABOUT US */
