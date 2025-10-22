@@ -341,6 +341,40 @@ div.carousel_wrapper {
   margin-bottom: 175px;
 }
 
+@media (max-width: 1025px) {
+
+  div.carousel_wrapper {
+    zoom: 70%;
+  }
+  
+}
+
+@media (max-width: 770px) {
+
+  div.carousel_wrapper {
+    margin-top: 50px;
+    zoom: 50%;
+  }
+  
+}
+
+@media (max-width: 667px) {
+
+  div.carousel_wrapper {
+    margin-top: 50px;
+    zoom: 40%;
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  div.carousel_wrapper {
+    margin-top: 50px;
+    zoom: 25%;
+  }
+  
+}
 
 div.container_projects {
   width: 100%;
@@ -433,11 +467,7 @@ img.cover_project {
 
 #item_1:checked ~ .cards #project_1, #item_2:checked ~ .cards #project_2, #item_3:checked ~ .cards #project_3 {
   transform: translatex(0) scale(1);
-  opacity: 1;
   z-index: 1;
-}
-#item_1:checked ~ .cards #project_1 img, #item_2:checked ~ .cards #project_2 img, #item_3:checked ~ .cards #project_3 img {
-  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
 }
 
 #item_2:checked ~ .player #test {
