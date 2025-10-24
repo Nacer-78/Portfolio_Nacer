@@ -72,7 +72,7 @@ export default function Header () {
             { prevPage && (
 
                 <Link to={prevPage.path}>
-                    <FontAwesomeIcon icon={faArrowLeft} className="header_link text-3xl cursor-pointer" />
+                    <FontAwesomeIcon icon={faArrowLeft} className="header_link text-3xl cursor-pointer hover:text-[#fbb206ff]" />
                 </Link>
 
             )}
@@ -84,7 +84,7 @@ export default function Header () {
             {nextPage && (
 
                 <Link to={nextPage.path}>
-                    <FontAwesomeIcon icon={faArrowRight} className="header_link text-3xl cursor-pointer" />
+                    <FontAwesomeIcon icon={faArrowRight} className="header_link text-3xl cursor-pointer hover:text-[#fbb206ff]" />
                 </Link>
 
             )}

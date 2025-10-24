@@ -41,11 +41,11 @@ export default function Certification () {
 
                 <div className="carousel__nav">
 
-                    <span id="moveLeft" className="carousel__arrow" onClick={moveLeft}>
+                    <span id="moveLeft" className="carousel__arrow hover:text-[#fbb206ff]" onClick={moveLeft}>
                         <FontAwesomeIcon icon={faArrowLeft} />  
                     </span>
 
-                    <span id="moveRight" className="carousel__arrow" onClick={moveRight}>
+                    <span id="moveRight" className="carousel__arrow hover:text-[#fbb206ff]" onClick={moveRight}>
                         <FontAwesomeIcon icon={faArrowRight} />  
                     </span>
 

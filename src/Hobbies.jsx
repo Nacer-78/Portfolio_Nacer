@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import GT7 from './picture/Gran_turimso_7.jpg';
 import RL from './picture/Rocket_league.jpg';
 import GTA6 from './picture/GTA_6.jpg';
@@ -17,19 +15,19 @@ export default function Hobbies () {
             <div className="mt-[50px] grid grid-cols-3">
 
                 <div className="flex justify-end">
-                    <Link to="https://www.gran-turismo.com/fr/gt7/top/">
+                    <a href="https://www.gran-turismo.com/fr/gt7/top/" target="_blank" rel="noopener noreferrer">
                         <img src={GT7} className="w-[200px] h-[200px] picture_hobbies" alt="GT7"/>
-                    </Link>
+                    </a>
                 </div>
                 <div className="flex justify-center">
-                    <Link to="https://www.rocketleague.com/fr/">
+                    <a href="https://www.rocketleague.com/fr/" target="_blank" rel="noopener noreferrer">
                         <img src={RL} className="w-[200px] h-[200px] picture_hobbies" alt="Rocket League"/>
-                    </Link>
+                    </a>
                 </div>
                 <div className="flex justify-start">
-                    <Link to="https://www.rockstargames.com/VI">
+                    <a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">
                         <img src={GTA6} className="w-[200px] h-[200px] picture_hobbies" alt="GTA 6"/>
-                    </Link>
+                    </a>
                 </div>
 
             </div>
@@ -52,17 +50,17 @@ export default function Hobbies () {
 
             <h1 className="mt-[75px] text-[30px] text-center underline"> Formule 1 </h1>
 
-            <div className="mt-[50px] grid grid-cols-2 gap-40">
+            <div className="mt-[50px] grid grid-cols-2 gap-10 lg:gap-30">
 
                 <div className="flex justify-end">
-                    <Link to="https://www.formula1.com/">
+                    <a href="https://www.formula1.com/" target="_blank" rel="noopener noreferrer">
                         <img src={F1} className="w-[200px] h-[200px] picture_hobbies" alt="Formule 1"/>
-                    </Link>
+                    </a>
                 </div>
                 <div className="flex justify-start">
-                    <Link to="https://fr.esteban-ocon.com/">
+                    <a href="https://fr.esteban-ocon.com/" target="_blank" rel="noopener noreferrer">
                         <img src={EO31} className="w-[200px] h-[200px] picture_hobbies" alt="Esteban Ocon"/>
-                    </Link>
+                    </a>
                 </div>
 
             </div>

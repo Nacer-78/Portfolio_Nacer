@@ -526,6 +526,50 @@ button.button_skills:hover {
   transition: 0.5s ease-in-out;
 }
 
+@media (max-width: 770px) {
+
+  div.container_bar_skills {
+    padding-left: 15px;
+  }
+
+  button.button_skills {
+    font-size: 40px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .bar {
+    height: 20px;
+  }
+
+  .bar_fill {
+    height: 16px;
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  div.container_bar_skills {
+    padding-top: 15px;
+  }
+
+  button.button_skills {
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .bar {
+    height: 15px;
+  }
+
+  .bar_fill {
+    height: 11px;
+  }
+  
+}
+
 /* END SKILLS */
 
 /* START CONTACT ME */
@@ -545,6 +589,37 @@ div.container_contact_me {
   perspective: 10em;
   perspective-origin: 50% 30%;
   box-sizing: unset;
+}
+
+@media (max-width: 1025px) {
+
+  div.container_contact_me {
+    zoom: 75%;
+    margin-top: 50px;
+  }
+  
+}
+
+@media (max-width: 770px) {
+
+  div.container_contact_me {
+    zoom: 50%;
+    margin-top: 100px;
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  div.container_contact_me {
+    zoom: 75%;
+    perspective-origin: 0% 10%;
+  }
+
+  .phone__wrapper {
+    padding-right: 350px !important;
+  }
+  
 }
 
 div.scene {
@@ -835,6 +910,14 @@ div.scene__title {
   box-sizing: unset;
 }
 
+@media (max-width: 426px) {
+
+  div.scene__title {
+    display: none;
+  }
+  
+}
+
 div.scene__title span {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -945,6 +1028,22 @@ div.container_certification {
   border-radius: 15px;
 }
 
+@media (max-width: 770px) {
+
+  .carousel_certifications {
+    max-width: 650px;
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  .carousel_certifications {
+    max-width: 350px;
+  }
+  
+}
+
 .carousel_item_certification {
   visibility:visible;
   display: flex;
@@ -961,7 +1060,6 @@ div.container_certification {
 }
 
 .carousel_item__info {
-  /* position: relative; */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -973,6 +1071,15 @@ div.container_certification {
   width: 40%;
   border-right: 3px solid white;
   background: rgba(0,0,0,0.35);
+}
+
+@media (max-width: 770px) {
+
+  .carousel_item__info {
+      padding: 0 30px;
+      overflow: visible;
+  }
+  
 }
 
 .carousel_item__image {
@@ -1003,6 +1110,15 @@ div.container_certification {
   padding: 10px;
 }
 
+@media (max-width: 426px) {
+
+  .carousel_item__diploma {
+    width: 75px;
+    height: 75px;
+  }
+  
+}
+
 .carousel_item__diploma:hover {
   opacity: 100%;
   transition: 0.5s all ease-in-out;
@@ -1023,7 +1139,7 @@ div.container_certification {
 }
 
 .carousel_item__title {
-  margin: 15px 0 0 0;
+  margin-top: 15px;
   font-size: 45px;
   font-weight: 700;
   color: white;
@@ -1043,6 +1159,36 @@ div.container_certification {
   color: white;
   line-height: 22px;
   margin-bottom: 35px;
+}
+
+@media (max-width: 770px) {
+
+  .carousel_item__description {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  .carousel_item__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .carousel_item__description {
+    display: none;
+  }
+
+  .carousel_item__btn {
+    font-size: 8px !important;
+    letter-spacing: 1px !important;
+
+  }
+  
 }
 
 .carousel_item_1 .carousel_item__image{
@@ -1068,6 +1214,7 @@ div.container_certification {
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
+  cursor: auto;
 }
 
 .carousel__nav {
@@ -1138,6 +1285,24 @@ img.picture_hobbies:hover {
   opacity: 100%;
   transition: 0.5s all ease-in-out;
   cursor: pointer;
+}
+
+@media (max-width: 770px) {
+
+  .picture_hobbies {
+    width: 150px;
+    height: 150px;
+  }
+  
+}
+
+@media (max-width: 426px) {
+
+  .picture_hobbies {
+    width: 100px;
+    height: 100px;
+  }
+  
 }
 
 /* END HOBBIES */

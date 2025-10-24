@@ -24,15 +24,15 @@ export default function Skills () {
 
     const handleButtonClick = (index) => {
 
-        const bar = bar_skills.current[index];
+        const bar = bar_skills.current[index]
 
         if (bar) {
 
-            bar.classList.remove('bar_fill');
-            void bar.offsetWidth;
-            bar.classList.add('bar_fill');
+            bar.classList.remove('bar_fill')
+            void bar.offsetWidth
+            bar.classList.add('bar_fill')
 
-            bar.style.width = skills[index].level;
+            bar.style.width = skills[index].level
 
         }
 
@@ -52,13 +52,13 @@ export default function Skills () {
 
                         <div className="mt-[25px] grid grid-cols-5 gap-4 items-center">
 
-                            <div className="pl-[25px]">
+                            <div className="pl-[0px] lg:pl-[25px]">
                                 <button onClick={() => handleButtonClick(index)} className="w-[150px] h-[150px] flex items-center justify-center text-[75px] border-[2px] border-solid border-white rounded-full cursor-pointer button_skills"> 
                                     <FontAwesomeIcon icon={skill.icon} />
                                 </button>
                             </div>
 
-                            <div className="col-span-4">
+                            <div className="col-span-4 container_bar_skills">
 
                                 <div className="bar">
                                     <div ref={(el) => (bar_skills.current[index] = el)} style={{ width: "0%" }}></div>
