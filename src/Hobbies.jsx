@@ -10,7 +10,7 @@ export default function Hobbies () {
 
         <>
         
-            <h1 className="mt-[50px] text-[30px] text-center underline"> Jeux-vidéos Playstation 5 </h1>
+            <h1 className="mt-[50px] text-[30px] text-center underline max-[426px]:text-[25px]"> Jeux-vidéos Playstation 5 </h1>
 
             <div className="mt-[50px] grid grid-cols-3">
 

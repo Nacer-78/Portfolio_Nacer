@@ -1,3 +1,9 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     background-image: url("picture/AUDI_RS6_HOME_MENU.jpg");
     background-size: cover;
@@ -489,6 +495,14 @@ p.carousel_description {
   padding-bottom: 20px;
 }
 
+@media (max-width: 426px) {
+
+  p.carousel_description {
+    display: none;
+  }
+  
+}
+
 /* END MY PROJECTS */
 
 /* START SKILLS */
@@ -613,6 +627,7 @@ div.container_contact_me {
 
   div.container_contact_me {
     zoom: 75%;
+    margin-top: 0px;
     perspective-origin: 0% 10%;
   }
 

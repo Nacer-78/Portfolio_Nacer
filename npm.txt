@@ -1,0 +1,8 @@
+Lancer le projet en local :
+
+npm run dev
+
+Déployer le projet en ligne :
+
+npm run build
+npm run deploy
