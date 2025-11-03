@@ -93,7 +93,7 @@ export default function Contact_me () {
                                         </div>
 
                                         <div className="application_phone">
-                                            <a href="/Portfolio_Nacer/files/Nacerallah_BOUAMAMA_CV_2025_Flouter.pdf" target="_blank" rel="noopener noreferrer">
+                                            <a href="/Portfolio_Nacer/files/Nacerallah_BOUAMAMA_CV_2025_Flouter.pdf?v=2" target="_blank" rel="noopener noreferrer">
                                                 <div className="cv__app">
                                                     <div className="cv__app__logo"></div>
                                                 </div>
