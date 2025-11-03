@@ -213,7 +213,7 @@ export default function About_us () {
 
     return (
     
-        <div className="global_container p-[50px]">
+        <div className="global_container p-[50px] max-[426px]:p-[25px]">
 
             {contents_div_hidden.map((content, index) => (
 
